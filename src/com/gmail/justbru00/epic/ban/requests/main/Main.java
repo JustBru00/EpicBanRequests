@@ -55,6 +55,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 							
 							BanRequest br = new BanRequest(player.getUniqueId().toString(), sb.toString(), playerToBanUUID);
 							br.writeToConfig();
+							Messager.msgPlayer("&aCreated ban request #" + br.id, player);
 							return true;
 						} else {
 							Messager.msgPlayer("&cPlease use proper arguments. /banrequest <player> <reason>", player);							
@@ -79,6 +80,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 						
 						BanRequest br = new BanRequest(player.getUniqueId().toString(), sb.toString(), playerToBanUUID);
 						br.writeToConfig();
+						Messager.msgPlayer("&aCreated ban request #" + br.id, player);
 						return true;
 						
 					} else {
@@ -113,12 +115,14 @@ public class Main extends JavaPlugin implements CommandExecutor{
 		plugin = this;
 		Messager.msgConsole("&aEnable Starting!");
 		
+		saveDefaultConfig();
+		
 		Messager.msgConsole("&aSetting Prefix");
 		prefix = Messager.color(this.getConfig().getString("prefix"));
 		
 		Bukkit.getServer().getPluginManager().registerEvents(new GUIListener(), plugin);
 		
-		Messager.msgConsole("&Enable Finished!");
+		Messager.msgConsole("&aEnable Finished!");
 	}
 
 	

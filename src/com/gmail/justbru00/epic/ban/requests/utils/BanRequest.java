@@ -13,18 +13,18 @@ import com.gmail.justbru00.epic.ban.requests.main.Main;
 
 public class BanRequest {
 
-	long timeOpened = -1;
-	long timeClosed = -1;
-	String openerUUID = "null";
-	String closerUUID = "null";
-	String timeOpenedFormatted = "null";
-	String timeClosedFormatted = "null";
-	boolean closed = false;
-	boolean accepted = false;
-	boolean denied = false;
-	String banReason = "null";
-	int id = -1;	
-	String playerToBanUUID = "null";
+	public long timeOpened = -1;
+	public long timeClosed = -1;
+	public String openerUUID = "null";
+	public String closerUUID = "null";
+	public String timeOpenedFormatted = "null";
+	public String timeClosedFormatted = "null";
+	public boolean closed = false;
+	public boolean accepted = false;
+	public boolean denied = false;
+	public String banReason = "null";
+	public int id = -1;	
+	public String playerToBanUUID = "null";
 	
 	 /**
 	  * Use for opening a new ban request.	  

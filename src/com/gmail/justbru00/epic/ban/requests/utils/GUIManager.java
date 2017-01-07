@@ -84,13 +84,16 @@ public class GUIManager {
 		
 		i.setItem(20, pending);
 		
+		// Remove the archived ones for now.
+		
+		/**
 		ItemStack archive = new ItemStack(Material.CHEST);
 		ItemMeta archiveMeta = archive.getItemMeta();
 		archiveMeta.setDisplayName(Messager.color("&7Archived Requests"));
 		archive.setItemMeta(archiveMeta);
 		
 		i.setItem(24, archive);
-		
+		**/
 		
 		return i;
 	}
