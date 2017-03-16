@@ -58,7 +58,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 							Messager.msgPlayer("&aCreated ban request #" + br.id, player);
 							return true;
 						} else {
-							Messager.msgPlayer("&cPlease use proper arguments. /banrequest <player> <reason>", player);							
+							Messager.msgPlayer("&cPlease use proper arguments. /requestban <player> <reason>", player);							
 							return true;
 						}						
 					} // End /banrequest view handleing				
@@ -84,7 +84,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 						return true;
 						
 					} else {
-						Messager.msgPlayer("&cPlease use proper arguments. /banrequest <player> <reason>", player);
+						Messager.msgPlayer("&cPlease use proper arguments. /requestban <player> <reason>", player);
 						return true;
 					}
 					
