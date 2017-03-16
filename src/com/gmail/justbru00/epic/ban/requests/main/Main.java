@@ -135,12 +135,12 @@ public class Main extends JavaPlugin implements CommandExecutor{
 	public static void notifyAdmins(BanRequest b) {
 		for (Player p : Bukkit.getOnlinePlayers()) {
 			if (p.hasPermission("requestban.notify")) {
-				Messager.msgPlayer("&a[#" + b.id + "] " + Bukkit.getPlayer(UUID.fromString(b.openerUUID)).getName() + 
-						" just submitted a ban request: Ban: " + Bukkit.getPlayer(UUID.fromString(b.playerToBanUUID)).getName() + " Reason: " + b.banReason, p);
+				Messager.msgPlayer("&a[#" + b.id + "] " + Bukkit.getOfflinePlayer(UUID.fromString(b.openerUUID)).getName() + 
+						" just submitted a ban request -> Ban: " + Bukkit.getOfflinePlayer(UUID.fromString(b.playerToBanUUID)).getName() + " Reason: " + b.banReason, p);
 			}
 		}
-		Messager.msgConsole("&a[#" + b.id + "] " + Bukkit.getPlayer(UUID.fromString(b.openerUUID)).getName() + 
-				" just submitted a ban request: Ban: " + Bukkit.getPlayer(UUID.fromString(b.playerToBanUUID)).getName() + " Reason: " + b.banReason);
+		Messager.msgConsole("&a[#" + b.id + "] " + Bukkit.getOfflinePlayer(UUID.fromString(b.openerUUID)).getName() + 
+				" just submitted a ban request -> Ban: " + Bukkit.getOfflinePlayer(UUID.fromString(b.playerToBanUUID)).getName() + " Reason: " + b.banReason);
 	}
 
 	
