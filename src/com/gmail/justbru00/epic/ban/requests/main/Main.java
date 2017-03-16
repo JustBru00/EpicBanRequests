@@ -112,7 +112,6 @@ public class Main extends JavaPlugin implements CommandExecutor{
 		
 		plugin = null;
 	}
-
 	
 	
 	@Override
