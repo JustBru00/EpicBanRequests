@@ -1,5 +1,6 @@
 package com.gmail.justbru00.epic.ban.requests.main;
 
+import java.util.UUID;
 import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
@@ -56,6 +57,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 							BanRequest br = new BanRequest(player.getUniqueId().toString(), sb.toString(), playerToBanUUID);
 							br.writeToConfig();
 							Messager.msgPlayer("&aCreated ban request #" + br.id, player);
+							notifyAdmins(br);
 							return true;
 						} else {
 							Messager.msgPlayer("&cPlease use proper arguments. /requestban <player> <reason>", player);							
@@ -81,6 +83,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 						BanRequest br = new BanRequest(player.getUniqueId().toString(), sb.toString(), playerToBanUUID);
 						br.writeToConfig();
 						Messager.msgPlayer("&aCreated ban request #" + br.id, player);
+						notifyAdmins(br);
 						return true;
 						
 					} else {
@@ -123,6 +126,17 @@ public class Main extends JavaPlugin implements CommandExecutor{
 		Bukkit.getServer().getPluginManager().registerEvents(new GUIListener(), plugin);
 		
 		Messager.msgConsole("&aEnable Finished!");
+	}
+	
+	public static void notifyAdmins(BanRequest b) {
+		for (Player p : Bukkit.getOnlinePlayers()) {
+			if (p.hasPermission("requestban.notify")) {
+				Messager.msgPlayer("&a[#" + b.id + "] " + Bukkit.getPlayer(UUID.fromString(b.openerUUID)).getName() + 
+						" just submitted a ban request: Ban: " + Bukkit.getPlayer(UUID.fromString(b.playerToBanUUID)).getName() + " Reason: " + b.banReason, p);
+			}
+		}
+		Messager.msgConsole("&a[#" + b.id + "] " + Bukkit.getPlayer(UUID.fromString(b.openerUUID)).getName() + 
+				" just submitted a ban request: Ban: " + Bukkit.getPlayer(UUID.fromString(b.playerToBanUUID)).getName() + " Reason: " + b.banReason);
 	}
 
 	
