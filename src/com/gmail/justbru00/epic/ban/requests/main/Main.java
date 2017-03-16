@@ -12,6 +12,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.justbru00.epic.ban.requests.bstats.Metrics;
 import com.gmail.justbru00.epic.ban.requests.listeners.GUIListener;
 import com.gmail.justbru00.epic.ban.requests.utils.BanRequest;
 import com.gmail.justbru00.epic.ban.requests.utils.GUIManager;
@@ -117,6 +118,9 @@ public class Main extends JavaPlugin implements CommandExecutor{
 	public void onEnable() {
 		plugin = this;
 		Messager.msgConsole("&aEnable Starting!");
+		
+		Messager.msgConsole("&aStats start");
+		Metrics bstats = new Metrics(this);
 		
 		saveDefaultConfig();
 		
