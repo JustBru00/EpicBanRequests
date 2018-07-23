@@ -1,6 +1,7 @@
 main: com.gmail.justbru00.epic.ban.requests.main.Main
-version: 1.1
+version: 1.2
 name: EpicBanRequests
+api-version: 1.13
 commands:
   requestban:
     description: Requests a ban by a higher staff.

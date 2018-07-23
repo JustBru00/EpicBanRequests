@@ -64,7 +64,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 							Messager.msgPlayer("&cPlease use proper arguments. /requestban <player> <reason>", player);							
 							return true;
 						}						
-					} // End /banrequest view handleing				
+					} // End /requestban view handling				
 					
 					if (args.length >= 2) {
 						String playerToBanUUID = "";
