@@ -25,7 +25,7 @@ public class GUIListener implements Listener {
 	public void onInventoryClick(InventoryClickEvent e) {
 		
 		if (e.getInventory() != null) {			
-			String name = e.getInventory().getName();
+			String name = e.getView().getTitle();
 			if (name.equals(Messager.color("&bMain Menu"))) {				
 				e.setCancelled(true);
 				if (e.getCurrentItem() != null) {
