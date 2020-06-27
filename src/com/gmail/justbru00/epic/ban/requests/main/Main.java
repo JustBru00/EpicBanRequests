@@ -45,6 +45,10 @@ public class Main extends JavaPlugin implements CommandExecutor{
 							String playerToBanUUID = "";
 							try {
 								playerToBanUUID = Bukkit.getOfflinePlayer(args[0]).getUniqueId().toString();
+								if (playerToBanUUID == null) {
+									Messager.msgPlayer("&cThat player could not be found. Are they online?", player);
+									return true;
+								}
 							} catch (Exception e) {
 								Messager.msgPlayer("&cThat player could not be found.", player);
 								return true;
@@ -71,6 +75,10 @@ public class Main extends JavaPlugin implements CommandExecutor{
 						String playerToBanUUID = "";
 						try {
 							playerToBanUUID = Bukkit.getOfflinePlayer(args[0]).getUniqueId().toString();
+							if (playerToBanUUID == null) {
+								Messager.msgPlayer("&cThat player could not be found. Are they online?", player);
+								return true;
+							}
 						} catch (Exception e) {
 							Messager.msgPlayer("&cThat player could not be found.", player);
 							return true;
