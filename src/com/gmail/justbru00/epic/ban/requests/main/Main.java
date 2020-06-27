@@ -24,6 +24,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 	public static Logger logger = Bukkit.getLogger();
 	public static String prefix = Messager.color("&8[&bEpic&fBanRequest&8] &f");
 	private static Main plugin;
+	private static int BSTATS_METRICS_ID = 404;
 
 	
 	@SuppressWarnings("deprecation")
@@ -120,7 +121,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 		Messager.msgConsole("&aEnable Starting!");
 		
 		Messager.msgConsole("&aStats start");
-		Metrics bstats = new Metrics(this);
+		Metrics bstats = new Metrics(this, BSTATS_METRICS_ID);
 		
 		saveDefaultConfig();
 		
