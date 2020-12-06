@@ -17,9 +17,7 @@ guis:
   requestban:
     accepted: '&aAccepted the ban request.'
     denied: '&cDenied the ban request.'    
-    
-# The following variables can be used in the admin_notification messages:
-# {request_id}, {request_opener_name}, {request_player_to_ban_name}, {request_ban_reason}
+
 admin_notification:
   player: '&a[#{request_id}] {request_opener_name} just submitted a ban request: \n&aBan: {request_player_to_ban_name} \n&aReason: {request_ban_reason}'
   console: '&a[#{request_id}] {request_opener_name} just submitted a ban reqeust -> Ban: {request_player_to_ban_name} for {request_ban_reason}.'    
