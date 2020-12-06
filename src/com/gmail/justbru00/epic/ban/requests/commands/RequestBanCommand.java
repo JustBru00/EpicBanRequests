@@ -48,7 +48,7 @@ public class RequestBanCommand implements CommandExecutor {
 							
 							BanRequest br = new BanRequest(player.getUniqueId().toString(), sb.toString(), playerToBanUUID);
 							br.writeToConfig();
-							String varReplacedMsg = Main.replaceBanRequestTextVariables(Messager.getPresetMessage("commmands.requestban.created_ban_request"), br);
+							String varReplacedMsg = Main.replaceBanRequestTextVariables(Messager.getPresetMessage("commands.requestban.created_ban_request"), br);
 							Messager.msgPlayer(varReplacedMsg, player);
 							Main.notifyAdmins(br);
 							return true;
@@ -79,7 +79,7 @@ public class RequestBanCommand implements CommandExecutor {
 						
 						BanRequest br = new BanRequest(player.getUniqueId().toString(), sb.toString(), playerToBanUUID);
 						br.writeToConfig();
-						String varReplacedMsg = Main.replaceBanRequestTextVariables(Messager.getPresetMessage("commmands.requestban.created_ban_request"), br);
+						String varReplacedMsg = Main.replaceBanRequestTextVariables(Messager.getPresetMessage("commands.requestban.created_ban_request"), br);
 						Messager.msgPlayer(varReplacedMsg, player);
 						Main.notifyAdmins(br);
 						return true;
