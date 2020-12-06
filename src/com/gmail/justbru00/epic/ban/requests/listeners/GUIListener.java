@@ -39,6 +39,7 @@ public class GUIListener implements Listener {
 						}
 					}
 				}
+				
 			} else if (name.equals(Messager.color("&cPending Ban Requests"))) {
 				e.setCancelled(true);
 				
