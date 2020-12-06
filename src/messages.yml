@@ -19,5 +19,5 @@ guis:
     denied: '&cDenied the ban request.'    
 
 admin_notification:
-  player: '&a[#{request_id}] {request_opener_name} just submitted a ban request: \n&aBan: {request_player_to_ban_name} \n&aReason: {request_ban_reason}'
+  player: '&a[#{request_id}] {request_opener_name} just submitted a ban reqeust -> Ban: {request_player_to_ban_name} for {request_ban_reason}.'
   console: '&a[#{request_id}] {request_opener_name} just submitted a ban reqeust -> Ban: {request_player_to_ban_name} for {request_ban_reason}.'    
