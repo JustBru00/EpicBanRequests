@@ -29,4 +29,36 @@ public class Messager {
 		sender.sendMessage(Messager.color(Main.prefix + msg));
 	}
 	
+	public static void msgPlayerWithPresetMessage(String messageKey, Player p) {
+		String msg = Main.messages.getString(messageKey);
+		if (msg == null) {
+			msg = "Failed to get preset message from key: " + messageKey;
+		}
+		msgPlayer(msg, p);
+	}
+	
+	public static void msgConsoleWithPresetMessage(String messageKey) {
+		String msg = Main.messages.getString(messageKey);
+		if (msg == null) {
+			msg = "Failed to get preset message from key: " + messageKey;
+		}
+		msgConsole(msg);
+	}
+	
+	public static void msgSenderWithPresetMessage(String messageKey, CommandSender s) {
+		String msg = Main.messages.getString(messageKey);
+		if (msg == null) {
+			msg = "Failed to get preset message from key: " + messageKey;
+		}
+		msgSender(msg, s);
+	}
+	
+	public static String getPresetMessage(String messageKey) {
+		String msg = Main.messages.getString(messageKey);
+		if (msg == null) {
+			msg = "Failed to get preset message from key: " + messageKey;
+		}
+		return msg;
+	}
+	
 }

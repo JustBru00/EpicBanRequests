@@ -114,7 +114,7 @@ public class GUIListener implements Listener {
 					e.getInventory().setItem(34, new ItemStack(Material.AIR));
 					e.getInventory().setItem(35, new ItemStack(Material.AIR));
 					
-					Messager.msgPlayer("&aAccepted the ban request.", (Player) e.getWhoClicked()); 
+					Messager.msgPlayerWithPresetMessage("guis.requestban.accepted", (Player) e.getWhoClicked()); 
 					
 					return;
 				} else if (e.getCurrentItem().getType() == Material.REDSTONE_BLOCK) {
@@ -155,7 +155,7 @@ public class GUIListener implements Listener {
 					e.getInventory().setItem(34, new ItemStack(Material.AIR));
 					e.getInventory().setItem(35, new ItemStack(Material.AIR));
 					
-					Messager.msgPlayer("&aDenied the ban request.", (Player) e.getWhoClicked()); 
+					Messager.msgPlayerWithPresetMessage("guis.requestban.denied", (Player) e.getWhoClicked()); 
 					
 					return;
 				}
