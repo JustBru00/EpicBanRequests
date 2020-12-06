@@ -1,9 +1,8 @@
 # EpicBanRequests by JustBru00
-# You can use {player}, {uuid}, and {reason} in the ban command.
+# You can use {player}, {uuid}, and {reason} in the command_to_run.
 
-prefix: '&8[&bEpic&fBanRequest&8] &f'
+prefix: '&8[&bEpic&fBanRequests&8] &f'
 
-# You can use {player}, {uuid}, and {reason} in the ban command.
 command_to_run: 'ban {player} {reason}'
 
 current_id: 0
